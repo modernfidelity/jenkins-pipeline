@@ -20,8 +20,11 @@ node {
 
     // PIPELINE STAGE
     stage 'Test'
+    sh "npm test"
 
 
-
+    // PIPELINE STAGE
+    stage 'Deploy'
+    sh "deploy"
 
 }

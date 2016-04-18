@@ -13,15 +13,14 @@ node {
 
    // PIPELINE STAGE
    stage 'Build'
+
    // Run the npm install + gulp compile (build)
    sh "npm install"
    sh "gulp build production"
 
-
     // PIPELINE STAGE
     stage 'Test'
     sh "npm test"
-
 
     // PIPELINE STAGE
     stage 'Deploy'

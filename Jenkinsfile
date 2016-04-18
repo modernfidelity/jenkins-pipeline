@@ -1,7 +1,7 @@
 node {
 
    // PIPELINE STAGE
-   stage 'Checkout'
+   stage "Checkout"
 
    // Checkout code from repository
    checkout scm
@@ -12,18 +12,18 @@ node {
    // def mvnHome = tool 'M3'
 
    // PIPELINE STAGE
-   stage 'Build'
+   stage "Build"
 
    // Run the npm install + gulp compile (build)
    sh "npm install"
    sh "gulp build production"
 
     // PIPELINE STAGE
-    stage 'Test'
+    stage "Test"
     sh "npm test"
 
     // PIPELINE STAGE
-    stage 'Deploy'
+    stage "Deploy"
     sh "deploy"
 
 }

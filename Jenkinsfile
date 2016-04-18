@@ -1,29 +1,30 @@
+#!groovy
+
 node {
 
-   // PIPELINE STAGE
-   stage "Checkout"
+    // PIPELINE STAGE
+    stage 'Checkout'
 
-   // Checkout code from repository
-   checkout scm
-
-   // Get the maven tool.
-   // ** NOTE: This 'M3' maven tool must be configured
-   // **       in the global configuration.
-   // def mvnHome = tool 'M3'
-
-   // PIPELINE STAGE
-   stage "Build"
-
-   // Run the npm install + gulp compile (build)
-   sh "npm install"
-   sh "gulp build production"
+    // Checkout code from repository
+    checkout scm
 
     // PIPELINE STAGE
-    stage "Test"
-    sh "npm test"
+    stage 'Build'
+
+    // Run the npm install + gulp compile (build)
+    sh "npm install"
 
     // PIPELINE STAGE
-    stage "Deploy"
+    stage 'Test'
+
+    sh "npm test unit"
+
+    // PIPELINE STAGE
+    stage 'Deploy'
+
     sh "deploy"
 
 }
+
+
+return this;

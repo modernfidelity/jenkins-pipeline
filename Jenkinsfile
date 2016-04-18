@@ -2,6 +2,7 @@
 
 node {
 
+
     // PIPELINE STAGE
     stage 'Checkout'
 
@@ -16,7 +17,6 @@ node {
 
     // PIPELINE STAGE
     stage 'Test'
-
     sh "npm test unit"
 
     // PIPELINE STAGE

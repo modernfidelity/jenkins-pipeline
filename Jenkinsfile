@@ -2,6 +2,7 @@
 
 node {
 
+    properties ([[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5']]])
 
     // PIPELINE STAGE
     stage 'Checkout'

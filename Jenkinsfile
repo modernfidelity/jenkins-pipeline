@@ -22,7 +22,7 @@ node {
 
     // PIPELINE STAGE
     stage 'Test'
-    //sh "npm test unit"
+    sh "npm test"
 
     // PIPELINE STAGE
     stage 'Deploy'

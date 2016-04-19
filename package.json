@@ -1,0 +1,19 @@
+{
+  "name": "jenkins-pipeline",
+  "version": "1.0.0",
+  "description": "Example Jenkins Pipeline",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modernfidelity/jenkins-pipeline.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/modernfidelity/jenkins-pipeline/issues"
+  },
+  "homepage": "https://github.com/modernfidelity/jenkins-pipeline#readme"
+}
